@@ -163,7 +163,8 @@ sudo yum autoremove git -y
 - Install a previous version of git on Amazon Linux instance.
 ​
 ```bash
-sudo yum --showduplicates list git
+cd ..
+
 sudo yum install git-2.14.5-1.amzn2 -y
 ```
 - Check the version of git installed on Amazon Linux instance.
