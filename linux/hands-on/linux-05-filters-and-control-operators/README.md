@@ -37,13 +37,7 @@ vim days.txt
 ```
 ​
 ```bash
-Monday
-Tuesday
-Wednesday
-Thursday
-Friday
-Saturday
-Sunday
+ls
 ```
 - Display the content of days.txt.
 ```bash

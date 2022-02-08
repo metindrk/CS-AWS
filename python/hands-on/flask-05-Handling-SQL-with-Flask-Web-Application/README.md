@@ -91,3 +91,12 @@ At the end of the this hands-on training, students will be able to;
 - Run application with Python
 
 
+
+
+sudo pip3 install flask
+
+sudo pip3 install flask-mysql
+
+sudo pip3 install sqlalchemy
+
+sudo pip3 install Flask-SQLAlchemy
