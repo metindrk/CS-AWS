@@ -6,23 +6,37 @@
 
 # Make sure the script is being executed with superuser privileges.
 
+if [[ "$UID" -ne 0]]
+then 
+    echo "Please run this command with sudo"
+    exit
+fi
 
 # Get the username (login).
-
+read -p "Please Enter username : " username
 # Get the real name (contents for the description field).
-
+read -p "Please Enter comment : " comment
 # Get the password.
-
+read -s -p "Please Enter Password : " password
 # Create the account.
-
+useradd -c $comment -m username
 # Check to see if the useradd command succeeded.
 # We don't want to tell the user that an account was created when it hasn't been.
 
+if [[ $? -eq 0 ]]
+then
+  echo "Success! User has been created"
+fi
 # Set the password.
-
+echo $password | passwd --stdin $username
 # Check to see if the passwd command succeeded.
-
+if [[ $? -eq 0 ]]
+then
+  echo "Password Success!"
+fi
 # Force password change on first login.
-
+passwd -e $username
 # Display the username, password, and the host where the user was created.
-
+echo -e "Your username: $username
+Your password: $password
+Hostname : $HOSTNAME"

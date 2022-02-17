@@ -291,7 +291,7 @@ crontab -l              # list current cron tasks
 crontab -u username -e  # edit other users's crontab file
 ```
 
-- Editing the crontab file is not complex, but we should first learn how to set a date and time using 5 * on that file. There are six fields that we use on every cron task line. Those are explained in detail in the below picture.
+- Editing the crontab file is not complex, but we should first learn how to set a date and time using 5 * on that file. There are six fields that wie use on every cron task line. Those are explained in detail in the beiilow picture.
 
 ![crontab format](./crontab-format.png)
 
